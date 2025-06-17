@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.Controller">
    <top>
       <AnchorPane prefHeight="135.0" prefWidth="600.0" BorderPane.alignment="CENTER">
@@ -45,7 +44,7 @@
                   <Font name="Arial Black" size="15.0" />
                </font>
             </TextField>
-            <Button fx:id="SUBMITBUTTON" layoutX="466.0" layoutY="195.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="108.0" text="SUBMIT">
+            <Button fx:id="SUBMITBUTTON" layoutX="466.0" layoutY="195.0" mnemonicParsing="false" onAction="#SUBMIT_BUTTON_ACTION" prefHeight="47.0" prefWidth="108.0" text="SUBMIT">
                <font>
                   <Font name="Arial Black" size="13.0" />
                </font>
