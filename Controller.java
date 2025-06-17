@@ -1,5 +1,7 @@
 package com.example;
 
+import java.util.ArrayList;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -16,7 +18,6 @@ public class Controller {
     private Button SUBMITBUTTON;
     @FXML
     private  void SUBMIT_BUTTON_ACTION(){
-     //System.out.println(CheckingInstants().toString());
      switch(CheckingInstants()){
       case "LOGIN_EMPTHY":
       System.out.println("LOGIN FIELD IS EMPTHY");
@@ -29,6 +30,7 @@ public class Controller {
       break;
       case "ALL_GOOD":
       System.out.println("ALL GOOD");
+      WriteLoginInString(LOGINFIELD.getText(),PASSWORDFIELD.getText());
       break;  
        }
     }
@@ -44,5 +46,12 @@ public class Controller {
           return Status = "ALL_GOOD";
         }
         // return null;
+    }
+    public void WriteLoginInString(String LoginForList,String PasswordForList){
+      System.out.println("Here is your data in log-in");
+      //  ArrayList <String> List= new ArrayList<>();
+      //  List.add(LoginForList);
+       System.out.println("Login is : " + LoginForList);
+       System.out.println("Password is : " + PasswordForList);
     }
 }
