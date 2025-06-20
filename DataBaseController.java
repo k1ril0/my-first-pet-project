@@ -4,22 +4,23 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class DataBaseController {
-    String Url = "jdbc:mysql://localhost:3306/my_project_database";
-    String Password = "1234567";
-    String Name = "root";
-    public Connection MainConnection(String name,String password,String url){
+    public void MainConnection(){
         try{
-          if(!name.isEmpty()||!password.isEmpty()||!url.isEmpty()){
-            Connection connection = DriverManager.getConnection(name,password,url);
-            System.out.println("DATA_BASE CONNECTED");
+           String Url = "jdbc:mysql://localhost:3306/log_in_storeg";
+           String Password = "1234567";
+           String Name = "root";
+          //Connection connection = null;
+          if(Name.isEmpty()||Password.isEmpty()||Url.isEmpty()){
+            System.out.println("something went wrong while connecting database");   
           }else{
-            return null;
+            Connection connection = DriverManager.getConnection(Name,Password,Url);
+            System.out.println("DATA_BASE CONNECTED - All Good");
           }
-          return connection; 
+        
            
         }catch(Exception e){
           e.printStackTrace();
-        }
+        }        
     }
     // public void GetConnection(){
     //     try{
