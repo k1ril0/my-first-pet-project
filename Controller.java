@@ -16,6 +16,13 @@ public class Controller {
 
     @FXML
     private Button SUBMITBUTTON;
+
+    @FXML
+    private Button SUBMITBUTTON_FOR_DATA_BASE;
+
+
+
+
     @FXML
     private  void SUBMIT_BUTTON_ACTION(){
      switch(CheckingInstants()){
@@ -30,7 +37,7 @@ public class Controller {
       break;
       case "ALL_GOOD":
       System.out.println("ALL GOOD");
-      WriteLoginInString(LOGINFIELD.getText(),PASSWORDFIELD.getText());
+      //WriteLoginInString(LOGINFIELD.getText(),PASSWORDFIELD.getText());
       break;  
        }
     }
@@ -40,18 +47,27 @@ public class Controller {
          return Status = "LOGIN_EMPTHY";
         }else if(PASSWORDFIELD.getText().isEmpty()){
           return Status = "PASSWORD_EMPTHY";
-        }else if(PASSWORDFIELD.getText().isEmpty()||LOGINFIELD.getText().isEmpty()){
+        }else if(PASSWORDFIELD.getText().isEmpty() && LOGINFIELD.getText().isEmpty()){
           return Status = "BOTH_EMPTHY";
         }else{
           return Status = "ALL_GOOD";
-        }
+        }  
         // return null;
     }
-    public void WriteLoginInString(String LoginForList,String PasswordForList){
-      System.out.println("Here is your data in log-in");
-      //  ArrayList <String> List= new ArrayList<>();
-      //  List.add(LoginForList);
-       System.out.println("Login is : " + LoginForList);
-       System.out.println("Password is : " + PasswordForList);
+    //not sure about this method 
+    // public void WriteLoginInString(String LoginForList,String PasswordForList){
+    //   System.out.println("Here is your data in log-in");
+    //   //  ArrayList <String> List= new ArrayList<>();
+    //   //  List.add(LoginForList);
+    //    System.out.println("Login is : " + LoginForList);
+    //    System.out.println("Password is : " + PasswordForList);
+    // }
+
+    @FXML
+    private void Acttive_Data_Base(){
+      SUBMITBUTTON_FOR_DATA_BASE.setOnAction(event -> {
+        DataBaseController dBaseController = new DataBaseController();
+        dBaseController.MainConnection();
+      });
     }
 }
