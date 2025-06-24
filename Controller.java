@@ -37,7 +37,6 @@ public class Controller {
       break;
       case "ALL_GOOD":
       System.out.println("ALL GOOD");
-      //shoud work this time 
       DataBaseController controllerOfDataBase = new DataBaseController();
       controllerOfDataBase.InsertIntoDataBase(LOGINFIELD.getText(),PASSWORDFIELD.getText());
       break;  

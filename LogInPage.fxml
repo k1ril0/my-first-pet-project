@@ -49,6 +49,11 @@
                   <Font name="Arial Black" size="13.0" />
                </font>
             </Button>
+            <Button fx:id="SUBMITBUTTON_FOR_DATA_BASE" layoutX="36.0" layoutY="195.0" mnemonicParsing="false" onAction="#Acttive_Data_Base" prefHeight="47.0" prefWidth="108.0" text="Data Base">
+               <font>
+                  <Font name="Arial Black" size="13.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
    </center>

@@ -37,7 +37,7 @@ public class DataBaseController {
       statement.setString(2,ScannerPassword);
 
       int rowsAffected = statement.executeUpdate();
-      while(rowsAffected > 0){
+      if(rowsAffected > 0){
         System.out.println("Update in DataBase : " + rowsAffected);
       }
       }catch(Exception e){
